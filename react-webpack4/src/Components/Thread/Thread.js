@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function Thread() {
   const history = useNavigate();
   const buttonHandler = () => {
-    history.push("/home");
+    history("/");
   };
   return (
     <section>
