@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  font-family: sans-serif;
+  background-color: #ead0cd;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+.article {
+  background-color: #f9f2f1;
+  padding: 10px;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.15);
+}
+.value {
+  padding: 10px;
+  list-style: none;
+}
+.comment {
+  padding: 7px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(136, 126, 126, 0.25);
+}
+
+.submit {
+  border-radius: 20px;
+  padding: 7px;
+  margin: 8px;
+  background: rgba(136, 126, 126, 0.25);
+  border: none;
+}
+
+.submit:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
