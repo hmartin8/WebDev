@@ -1,6 +1,6 @@
 import Parse from "parse";
 
-//Data currently not reading in correctly from back4app - says Thread class in non existent 
+//gets all thread tiles 
 export const getTiles = () => {
   const Thread = Parse.Object.extend("Threads");
   const query = new Parse.Query(Thread);
@@ -8,3 +8,5 @@ export const getTiles = () => {
     return results;
   });
 };
+
+//in future add a create/write method

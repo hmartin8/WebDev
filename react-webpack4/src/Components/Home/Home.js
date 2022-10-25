@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { getTiles } from "../../Services/GetTiles.js";
+import { getTiles } from "../../Services/Threads.js";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [values, setTiles] = useState();
   const history = useNavigate();
-  const buttonHandler = () => {
-    history("/thread");
+  function buttonHandler(objId, title) {
+    history("/thread", {state:{objId: objId, title:title}});
   };
 
   useEffect(() => {
@@ -16,6 +16,7 @@ export default function Home() {
     });
   }, []);
 
+  //display basic information about threads - pulls data from Threads class
   return (
     <div className="article">
         <h1>Let's Hear It.</h1>
@@ -24,11 +25,12 @@ export default function Home() {
           <li key={value.id} className="value">
             {value.get("Title")} | {value.get("Category")}
             <br />
-            <button onClick={buttonHandler}>View More</button>
+            <button onClick={() => buttonHandler(value.id, value.get("Title"))}>View More</button>
           </li>
         ))}
       </ul>
     </div>
   );
 };
+//in future add ability to write a thread 
 
