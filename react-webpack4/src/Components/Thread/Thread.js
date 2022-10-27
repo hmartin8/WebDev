@@ -21,18 +21,6 @@ export default function Thread() {
 
   //display comments for the appropriate post - pulls data from Comment class
   return (
-    // <div className="comment-block">
-    //     <h1>{title}</h1>
-    //   <ul>
-    //     {values?.map((value) => (
-    //       <li key={value.id} className="value">
-    //         {value.get("Content")}
-    //         <br />
-    //       </li>
-    //     ))}
-    //   </ul>
-    //   <button onClick={buttonHandler}>Home</button>
-    // </div>
     <div className="article">
         <h1>{title}</h1>
       <div className="holder">
