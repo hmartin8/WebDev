@@ -17,18 +17,32 @@ export default function Home() {
   }, []);
 
   //display basic information about threads - pulls data from Threads class
+  // return (
+  //   <div className="article">
+  //     <h1>Let's Hear It.</h1>
+  //     <div className="holder">
+  //       {values?.map((value) => (
+  //         <li key={value.id} className="tile">
+  //           {value.get("Title")} | {value.get("Category")}
+  //           <br />
+  //           <button onClick={() => buttonHandler(value.id, value.get("Title"))}>View More</button>
+  //         </li>
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
   return (
     <div className="article">
-        <h1>Let's Hear It.</h1>
-      <ul>
+      <h1>Let's Hear It.</h1>
+      <div className="holder">
         {values?.map((value) => (
-          <li key={value.id} className="value">
+          <div className="tile">
             {value.get("Title")} | {value.get("Category")}
             <br />
-            <button onClick={() => buttonHandler(value.id, value.get("Title"))}>View More</button>
-          </li>
+            <button class = "viewMore" onClick={() => buttonHandler(value.id, value.get("Title"))}>View More</button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

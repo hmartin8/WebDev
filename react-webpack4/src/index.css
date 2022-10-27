@@ -18,11 +18,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
 }
-.article {
-  background-color: #f9f2f1;
-  padding: 10px;
-  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.15);
-}
+
 .value {
   padding: 10px;
   list-style: none;
@@ -46,3 +42,32 @@ body {
 .submit:hover {
   background: rgba(0, 0, 0, 0.3);
 }
+.article{
+  background-color: #f9f2f1;
+  padding: 10px;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.15);
+}
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tile{
+  background-color: #ead0cd;
+  margin: 10px;
+  box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.15);
+  width:25%;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  position: relative;
+  flex: 1 0 auto;
+  border-radius: 25px;
+  text-align: center;
+}
+.viewMore {
+  border:none;
+  border-radius: 8px;
+}
+
+
