@@ -17,8 +17,8 @@ export default function Components() {
       <Route path="/auth/register" element={<AuthRegister />} />
       <Route path="/auth/login" element={<AuthLogin />} />
       <Route index element={<AuthModule />} />
-      <Route path="thread" element={<Thread />} />
-      <Route path="home" element={<Home />} />
+      <Route path="/thread" element={<Thread />} />
+      <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,7 +9,7 @@ export default function Thread() {
   const objId = location.state.objId;
   const title = location.state.title;
   const buttonHandler = () => {
-    history("/");
+    history("/home");
   };
 
   useEffect(() => {
