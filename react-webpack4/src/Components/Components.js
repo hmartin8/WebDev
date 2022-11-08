@@ -3,6 +3,7 @@ import Thread from "./Thread/Thread";
 import AuthModule from "./Auth/Auth.js";
 import AuthRegister from "./Auth/AuthRegister";
 import AuthLogin from "./Auth/AuthLogin";
+import ProtectedRoute from "./ProtectedRoute/ProtectedRoute.js"
 import {
   BrowserRouter,
   Route,
@@ -18,7 +19,7 @@ export default function Components() {
       <Route path="/auth/login" element={<AuthLogin />} />
       <Route index element={<AuthModule />} />
       <Route path="/thread" element={<Thread />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<ProtectedRoute path="/home" element={Home} />} />
       </Routes>
     </BrowserRouter>
   );
