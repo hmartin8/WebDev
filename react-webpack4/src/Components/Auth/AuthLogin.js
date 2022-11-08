@@ -32,7 +32,6 @@ const AuthLogin = () => {
           );
           navigate("/home");
         }
-        // TODO: redirect user to main app
         setAdd(false);
       });
     }
