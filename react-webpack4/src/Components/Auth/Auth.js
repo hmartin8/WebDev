@@ -1,19 +1,27 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import {Navigate, useNavigate } from "react-router-dom";
 import { checkUser } from "./AuthService";
 
 const AuthModule = () => {
-  const navigate = useNavigate();
+  
 
   // redirect already authenticated users back to home
+  // if (checkUser()) {
+  //   alert("Auth: You are already logged in");
+  //   return(
+  //     <Navigate to="/home" replace />
+  //   );
+  // } 
+  const navigate = useNavigate();
+  
   useEffect(() => {
     if (checkUser()) {
-      alert("You are already logged in");
+      alert("Auth: You are already logged in");
       navigate("/home");
     }
   }, [navigate]);
-
+  // alert("hi");
   return (
     <div>
       <Link to="/auth/register">

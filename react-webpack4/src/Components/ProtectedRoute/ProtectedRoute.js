@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import {Navigate, useNavigate } from "react-router-dom";
 import { checkUser } from "../Auth/AuthService";
 
-// redirects unauthenticated users to the auth page
+// You can pass props using the spread operator to throw them on an object if there are too many to break out
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   console.log("element: ", Component);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (checkUser()) {
-        console.log("authenticated");
-    }
-    else {
-        console.log("unauthenticated");
-        navigate("/auth");
-    }
-  }, [navigate]);
-  return <Component />
+  if (checkUser()) {
+    return <Component />;
+  } 
+  else {
+    //this forces a redirect if the user is not recognized
+    return ( 
+      <Navigate to="/auth" replace />
+    );
+  }
 };
 
 export default ProtectedRoute;

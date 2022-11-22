@@ -1,40 +1,43 @@
 import React from "react";
 
 const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
-
   return (
     <form onSubmit={onSubmit} autoComplete="off">
-    {!isLogin ? 
-    <div>
-        <div className="form-group">
-          <label>First Name</label>
-          <br />
-          <input
-            type="text"
-            className="form-control"
-            id="first-name-input"
-            value={user.firstName}
-            onChange={onChange}
-            name="firstName"
-            placeholder="first name"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Last Name</label>
-          <br />
-          <input
-            type="text"
-            className="form-control"
-            id="last-name-input"
-            value={user.lastName}
-            onChange={onChange}
-            name="lastName"
-            required
-          />
-        </div>{" "}
-        </div> : <></>}
+      {!isLogin ? (
         <div>
+          <div className="form-group">
+            <label>First Name</label>
+            <br />
+            <input
+              type="text"
+              className="form-control"
+              id="first-name-input"
+              value={user.firstName}
+              onChange={onChange}
+              name="firstName"
+              placeholder="first name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Last Name</label>
+            <br />
+            <input
+              type="text"
+              className="form-control"
+              id="last-name-input"
+              value={user.lastName}
+              onChange={onChange}
+              name="lastName"
+              placeholder="last name"
+              required
+            />
+          </div>{" "}
+        </div>
+      ) : (
+        <></>
+      )}
+      <div>
         <div className="form-group">
           <label>Email</label>
           <br />
@@ -45,6 +48,7 @@ const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
             value={user.email}
             onChange={onChange}
             name="email"
+            placeholder="email"
             required
           />
         </div>{" "}
@@ -58,6 +62,7 @@ const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
             value={user.password}
             onChange={onChange}
             name="password"
+            placeholder="password"
             min="0"
             required
           />
@@ -67,8 +72,8 @@ const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
             Submit
           </button>
         </div>
-    </div>
-  </form>
+      </div>
+    </form>
   );
 };
 

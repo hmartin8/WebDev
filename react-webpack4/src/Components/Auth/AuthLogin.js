@@ -17,8 +17,8 @@ const AuthLogin = () => {
 
   useEffect(() => {
     if (checkUser()) {
-      alert("You are already logged in");
-      navigate("/home");
+      alert("Login: You are already logged in");
+      navigate("/");
     }
   }, [navigate]);
 
@@ -32,6 +32,7 @@ const AuthLogin = () => {
           );
           navigate("/home");
         }
+        // TODO: redirect user to main app
         setAdd(false);
       });
     }
